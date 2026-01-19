@@ -39,7 +39,6 @@ class ContactPage extends StatelessWidget {
               ),
               const SizedBox(height: 40),
 
-              // Contact Cards
               _buildModernContactCard(
                 icon: Icons.alternate_email_rounded,
                 title: "Email",
@@ -63,7 +62,6 @@ class ContactPage extends StatelessWidget {
 
               const SizedBox(height: 50),
 
-              // Social Media Row
               const Center(
                 child: Text(
                   "Follow me on social media",
@@ -81,7 +79,6 @@ class ContactPage extends StatelessWidget {
               ),
 
               const SizedBox(height: 40),
-              // Footer
               Center(
                 child: Text(
                   "Based in Jakarta, Indonesia 🇮🇩",

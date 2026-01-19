@@ -13,7 +13,6 @@ class SkillsPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header Section
               const Text(
                 "TECH STACK",
                 style: TextStyle(
@@ -35,15 +34,13 @@ class SkillsPage extends StatelessWidget {
               ),
               const SizedBox(height: 32),
 
-              // Main Skills Grid
               GridView.count(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 crossAxisCount: 2,
                 mainAxisSpacing: 20,
                 crossAxisSpacing: 20,
-                childAspectRatio:
-                    0.85, // Disesuaikan agar muat dengan Progress Bar
+                childAspectRatio: 0.85,
                 children: [
                   _buildModernSkillCard(
                     'Flutter',
@@ -74,7 +71,6 @@ class SkillsPage extends StatelessWidget {
 
               const SizedBox(height: 48),
 
-              // Other Skills Section
               const Text(
                 "Tools & Methodologies",
                 style: TextStyle(
@@ -85,7 +81,6 @@ class SkillsPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Chips with modern style
               Wrap(
                 spacing: 12,
                 runSpacing: 12,
@@ -100,9 +95,7 @@ class SkillsPage extends StatelessWidget {
                   _buildSkillChip('Unit Testing', Icons.check_circle_outline),
                 ],
               ),
-              const SizedBox(
-                height: 50,
-              ), // Padding bawah agar tidak mepet navbar
+              const SizedBox(height: 50),
             ],
           ),
         ),
@@ -135,7 +128,6 @@ class SkillsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // Icon and Title
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -159,7 +151,6 @@ class SkillsPage extends StatelessWidget {
               ],
             ),
 
-            // Progress Indicator
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

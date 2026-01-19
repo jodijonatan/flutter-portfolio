@@ -25,7 +25,6 @@ class AboutPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Header Section: Avatar & Badges
                   Center(
                     child: Column(
                       children: [
@@ -40,9 +39,7 @@ class AboutPage extends StatelessWidget {
                           child: const CircleAvatar(
                             radius: 60,
                             backgroundColor: Colors.white10,
-                            backgroundImage: AssetImage(
-                              'assets/profile.webp',
-                            ), // Ganti dengan foto kamu
+                            backgroundImage: AssetImage('assets/profile.webp'),
                           ),
                         ),
                         const SizedBox(height: 16),
@@ -72,8 +69,6 @@ class AboutPage extends StatelessWidget {
                   ),
 
                   const SizedBox(height: 40),
-
-                  // Intro Text
                   const Text(
                     "HELO, SAYA",
                     style: TextStyle(
@@ -95,7 +90,6 @@ class AboutPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
 
-                  // Content Card
                   Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -115,7 +109,6 @@ class AboutPage extends StatelessWidget {
 
                   const SizedBox(height: 30),
 
-                  // Stats Row
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

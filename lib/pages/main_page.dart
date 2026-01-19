@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; // Untuk HapticFeedback
+import 'package:flutter/services.dart';
 import 'dart:ui';
 
-// Import halaman-halaman portofolio kamu
 import 'about_page.dart';
 import 'skills_page.dart';
 import 'experience_page.dart';
@@ -19,25 +18,22 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _index = 0;
 
-  // Daftar halaman (Tanpa HomePage)
   final List<Widget> pages = const [
-    AboutPage(), // Index 0
-    SkillsPage(), // Index 1
-    ExperiencePage(), // Index 2
-    CertificatePage(), // Index 3
-    ContactPage(), // Index 4
+    AboutPage(),
+    SkillsPage(),
+    ExperiencePage(),
+    CertificatePage(),
+    ContactPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF0F2027),
-      // extendBody: true sangat penting agar konten halaman terlihat di balik navbar yang transparan
       extendBody: true,
 
       body: AnimatedSwitcher(
         duration: const Duration(milliseconds: 500),
-        // Menambahkan efek Fade dan Slide saat pindah halaman
         transitionBuilder: (Widget child, Animation<double> animation) {
           return FadeTransition(
             opacity: CurveTween(curve: Curves.easeInOut).animate(animation),
@@ -50,7 +46,6 @@ class _MainPageState extends State<MainPage> {
             ),
           );
         },
-        // Memberikan Key unik agar AnimatedSwitcher tahu kapan harus beranimasi
         child: Container(key: ValueKey<int>(_index), child: pages[_index]),
       ),
 
@@ -79,12 +74,11 @@ class _MainPageState extends State<MainPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    // Ikon disesuaikan dengan urutan pages:
-                    _buildNavItem(Icons.person_rounded, 0), // About
-                    _buildNavItem(Icons.code_rounded, 1), // Skills
-                    _buildNavItem(Icons.work_rounded, 2), // Experience
-                    _buildNavItem(Icons.card_membership_rounded, 3), // Cert
-                    _buildNavItem(Icons.contact_mail_rounded, 4), // Contact
+                    _buildNavItem(Icons.person_rounded, 0),
+                    _buildNavItem(Icons.code_rounded, 1),
+                    _buildNavItem(Icons.work_rounded, 2),
+                    _buildNavItem(Icons.card_membership_rounded, 3),
+                    _buildNavItem(Icons.contact_mail_rounded, 4),
                   ],
                 ),
               ),
@@ -100,7 +94,6 @@ class _MainPageState extends State<MainPage> {
     return GestureDetector(
       onTap: () {
         if (_index != index) {
-          // Menambahkan getaran halus saat tombol ditekan
           HapticFeedback.lightImpact();
           setState(() => _index = index);
         }
@@ -110,7 +103,6 @@ class _MainPageState extends State<MainPage> {
         curve: Curves.easeInOut,
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          // Background icon yang menyala saat terpilih
           color: isSelected
               ? Colors.cyanAccent.withOpacity(0.1)
               : Colors.transparent,
@@ -124,7 +116,6 @@ class _MainPageState extends State<MainPage> {
               color: isSelected ? Colors.cyanAccent : Colors.white54,
               size: isSelected ? 26 : 24,
             ),
-            // Penanda titik di bawah ikon yang aktif
             AnimatedContainer(
               duration: const Duration(milliseconds: 300),
               margin: const EdgeInsets.only(top: 4),

@@ -31,7 +31,6 @@ class CertificatePage extends StatelessWidget {
               ),
               const SizedBox(height: 30),
 
-              // List Sertifikat
               _buildCertificateCard(
                 title: "Expert Flutter Developer",
                 issuer: "Google Developers",
@@ -65,7 +64,6 @@ class CertificatePage extends StatelessWidget {
   }) {
     return Container(
       margin: const EdgeInsets.only(bottom: 24),
-      // PERBAIKAN DI SINI: Ganti 'overflow' menjadi 'clipBehavior'
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.05),
@@ -75,7 +73,6 @@ class CertificatePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Gambar Sertifikat dengan Overlay
           AspectRatio(
             aspectRatio: 16 / 9,
             child: Stack(
@@ -107,7 +104,6 @@ class CertificatePage extends StatelessWidget {
             ),
           ),
 
-          // Informasi Sertifikat
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Row(

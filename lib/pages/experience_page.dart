@@ -31,7 +31,6 @@ class ExperiencePage extends StatelessWidget {
               ),
               const SizedBox(height: 30),
 
-              // Timeline List
               _buildTimelineItem(
                 company: "Freelance",
                 role: "Mobile App Developer",
@@ -73,7 +72,6 @@ class ExperiencePage extends StatelessWidget {
     return IntrinsicHeight(
       child: Row(
         children: [
-          // Bagian Garis Timeline
           Column(
             children: [
               Container(
@@ -97,7 +95,6 @@ class ExperiencePage extends StatelessWidget {
           ),
           const SizedBox(width: 20),
 
-          // Bagian Konten
           Expanded(
             child: Padding(
               padding: const EdgeInsets.only(bottom: 30),

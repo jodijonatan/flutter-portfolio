@@ -35,7 +35,6 @@ class SectionCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(24),
         child: Stack(
           children: [
-            // Dekorasi lingkaran di latar belakang untuk kesan artistik
             Positioned(
               right: -20,
               top: -20,
@@ -49,7 +48,6 @@ class SectionCard extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Icon Container dengan Glass Effect
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
