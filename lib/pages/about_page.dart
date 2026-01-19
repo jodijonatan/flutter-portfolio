@@ -7,12 +7,9 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(
-        0xFF0F2027,
-      ), // Warna background gelap yang dalam
+      backgroundColor: const Color(0xFF0F2027),
       body: Stack(
         children: [
-          // Background Decor (Lingkaran cahaya abstrak)
           Positioned(
             top: -50,
             right: -50,
